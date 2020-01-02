@@ -4,8 +4,6 @@ jobs:
     docker:
       # specify the version
       - image: circleci/golang:1.11
-        environment:
-          GO111MODULE: "on"
 
     working_directory: /go/go-exercism
     steps:
@@ -13,4 +11,4 @@ jobs:
 
       # specify any bash command here prefixed with `run: `
       - run: go get -v -t -d ./...
-      - run: cd go && go test ./...
+      - run: go test ./...
