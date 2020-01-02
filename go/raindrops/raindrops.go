@@ -1,7 +1,7 @@
 package raindrops
 
 import (
-	"fmt"
+	"strconv"
 )
 
 // Convert function convert a number into a string that contains raindrop sounds
@@ -18,7 +18,7 @@ func Convert(input int) string {
 	}
 
 	if result == "" {
-		return fmt.Sprintf("%v", input)
+		return strconv.Itoa(input)
 	}
 
 	return result
